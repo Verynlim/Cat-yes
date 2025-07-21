@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top 10 Reasons Why Cat Iz Good</title>
+  <style>
+    body {
+      background-color: #fffbe7;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: red;
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+    ol {
+      font-size: 24px;
+      text-align: left;
+      display: inline-block;
+      text-shadow: 1px 1px #ccc;
+    }
+    li {
+      margin: 15px 0;
+    }
+    img {
+      margin-top: 50px;
+      width: 300px;
+      border-radius: 20px;
+    }
+    #random-cat-box {
+      margin-top: 50px;
+      width: 300px;
+      height: 300px;
+      border: 5px solid #ff0000;
+      border-radius: 20px;
+      overflow: hidden;
+      display: inline-block;
+      background: #eee;
+      position: relative;
+    }
+    #random-cat-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #refresh-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #ff5555;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #refresh-btn:hover {
+      background: #ff2222;
+    }
+  </style>
+</head>
+<body>
+  <h1>Top 10 Reasons Why Cat Iz Good</h1>
+  <ol>
+    <li>Uno - They go *meow meow* cutely</li>
+    <li>Dos - They sit in box, *meow meow*</li>
+    <li>Tres - They knead you like dough, *meow meow*</li>
+    <li>Cuatro - They purr, *meow meow*</li>
+    <li>Cinco - They sleep anywhere, *meow meow*</li>
+    <li>Seis - They chase lasers, *meow meow*</li>
+    <li>Siete - They wake you up for food, *meow meow*</li>
+    <li>Ocho - They look at you judgingly, *meow meow*</li>
+    <li>Nueve - They catch mice (sometimes), *meow meow*</li>
+    <li>Diez - They just exist, *meow meow*</li>
+  </ol>
+
+  <div id="random-cat-box">
+    <img id="random-cat-img" src="https://cataas.com/cat" alt="Random Cat">
+  </div>
+  <br>
+  <button id="refresh-btn">Refresh Cat 🐱</button>
+
+  <script>
+    const btn = document.getElementById('refresh-btn');
+    const img = document.getElementById('random-cat-img');
+
+    btn.addEventListener('click', () => {
+      img.src = 'https://cataas.com/cat?time=' + new Date().getTime();
+    });
+  </script>
+</body>
+</html>
